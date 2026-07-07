@@ -1,0 +1,332 @@
+/* 기본 변수, 공통 레이아웃, 헤더/네비게이션, 모바일 메뉴 */
+
+/* =========================
+  style.css (정비 완료)
+========================= */
+
+/* ===== Base / Theme ===== */
+:root{
+  /* Top(Dark) vs Content(White) */
+  --bg-dark: #2b2424;
+  --bg-dark-2: #342b2b;
+  --fg-white: #f6f6f6;
+
+  --bg-white: #ffffff;
+  --bg-white-2: #fafafa;
+  --fg-dark: #111111;
+
+  --muted-dark: rgba(255,255,255,.72);
+  --muted-light: rgba(17,17,17,.70);
+
+  --line-dark: rgba(255,255,255,.12);
+  --line-light: rgba(0,0,0,.08);
+
+  --gold: #d2b46f;
+  --gold2:#c7a85f;
+
+  --container: 1320px;
+  --radius: 16px;
+  --header-h: 120px;
+}
+
+*{ box-sizing: border-box; }
+html,body{ margin:0; padding:0; }
+
+body{
+  font-family: "Pretendard Variable", Pretendard, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg-white);
+  color: var(--fg-dark);
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+
+  /* ✅ fixed header 겹침 방지 (모든 페이지 공통) */
+  padding-top: var(--header-h);
+}
+
+a{ color: inherit; text-decoration: none; }
+img{ max-width:100%; display:block; }
+
+.container{
+  width: min(var(--container), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* ===== Header (Top Dark) ===== */
+.home-page{
+  --header-h: 69px;
+}
+
+.header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid rgba(0,0,0,.10);
+}
+
+.home-page .header{
+  background: rgba(0,0,0,.82);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.header-inner{
+  height: 100%;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 22px;
+  position: relative;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  min-width: 320px;
+  flex-shrink: 0;
+}
+.brand-logo{
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.35));
+}
+
+/* 텍스트 로고 자리 */
+.brand-textlogo{
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.home-page .brand-textlogo{
+  height: 28px;
+}
+
+/* ✅✅ (수정 핵심) 상호(브랜드 텍스트)만 더 크게/로고처럼 */
+.brand-text{
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 27px;         /* ✅ 상호 크게 */
+  color: #111;
+  line-height: 1;
+}
+
+/* ===== Nav ===== */
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap: clamp(10px, 0.9vw, 18px);
+  margin-left:auto;
+  flex: 1;
+  max-width: 920px;
+}
+
+.nav a{
+  position: relative;
+  color: rgba(17,17,17,.92);
+  white-space: nowrap;
+  transition: color .18s ease, opacity .18s ease, transform .18s ease;
+}
+
+.home-page .nav-bilingual{
+  align-items:center;
+}
+
+.home-page .nav-bilingual .nav-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap: 3px;
+  min-width: 94px;
+  padding: 8px 0 6px;
+  text-align:center;
+  color: rgba(255,255,255,.94);
+}
+
+.home-page .nav-bilingual .nav-band{
+  display:block;
+  width: 100%;
+  height: 12px;
+  margin-bottom: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,.02) 0%, rgba(255,255,255,.14) 50%, rgba(255,255,255,.02) 100%);
+}
+
+.home-page .nav-bilingual .nav-en{
+  display:block;
+  font-size: 8px;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,.62);
+}
+
+.home-page .nav-bilingual .nav-ko{
+  display:block;
+  font-size: 10px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,.95);
+}
+
+.home-page .nav-bilingual .nav-item:hover .nav-ko,
+.home-page .nav-bilingual .nav-item:hover .nav-en{
+  color: var(--gold);
+}
+
+.home-page .nav-bilingual .nav-item:hover .nav-band{
+  background: linear-gradient(90deg, rgba(210,180,111,.05) 0%, rgba(210,180,111,.42) 50%, rgba(210,180,111,.05) 100%);
+}
+
+/* 일반 메뉴 hover */
+.nav a:not(.nav-cta):hover{
+  color: var(--gold);
+}
+
+/* 일반 메뉴 밑줄 */
+.nav a:not(.nav-cta)::after{
+  content:"";
+  position:absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, rgba(0,0,0,0), var(--gold), rgba(0,0,0,0));
+  transition: transform .18s ease;
+  opacity: .95;
+}
+.nav a:not(.nav-cta):hover::after{
+  transform: scaleX(1);
+}
+
+.home-page .nav-bilingual .nav-item::after{
+  display:none;
+}
+
+/* CTA 텍스트 링크 */
+.nav-cta{
+  margin-left: 6px;
+  padding: 10px 2px;
+  border-radius: 0;
+  font-weight: 600;
+  color: var(--gold) !important;
+  background: transparent;
+  box-shadow: none;
+}
+.home-page .nav-bilingual .nav-cta{
+  margin-left: 0;
+}
+.nav-cta::after{
+  display: none;
+}
+.nav-cta:hover{
+  color: #111 !important;
+  transform: none;
+  box-shadow: none;
+}
+.home-page .nav-bilingual .nav-cta:hover .nav-ko,
+.home-page .nav-bilingual .nav-cta:hover .nav-en{
+  color: var(--gold) !important;
+}
+
+/* Mobile button */
+
+.nav-toggle{
+  display:none;
+  margin-left:auto;
+  width:44px;
+  height:44px;
+  border:0;
+  background:transparent;
+  padding:0;
+}
+.nav-toggle span{
+  display:block;
+  width: 18px;
+  height: 2px;
+  margin: 5px auto;
+  background: rgba(17,17,17,.92);
+  border-radius: 2px;
+}
+
+/* Mobile drawer (화이트 톤) */
+.mobile-drawer{
+  position: absolute;
+  top: calc(var(--header-h) - 2px);
+  right: 0;
+  width: min(320px, calc(100% - 32px));
+  background: rgba(255,255,255,.96);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 16px;
+  padding: 10px;
+  display:none;
+  box-shadow: 0 24px 60px rgba(0,0,0,.22);
+}
+.mobile-drawer a{
+  display:block;
+  padding: 12px 12px;
+  border-radius: 12px;
+  color: rgba(17,17,17,.92);
+  font-weight: 700;
+}
+.mobile-drawer a:hover{
+  background: rgba(0,0,0,.06);
+}
+.mobile-drawer .nav-cta{
+  display:block;
+  justify-content:initial;
+  margin: 6px 0 0 0;
+  color: var(--gold) !important;
+}
+.mobile-drawer .nav-cta:hover{
+  color:#111 !important;
+  background: rgba(0,0,0,.06);
+}
+
+
+.home-page .nav-toggle span{
+  background: rgba(255,255,255,.92);
+}
+
+.home-page .mobile-drawer{
+  background: rgba(10,10,10,.96);
+  border: 1px solid rgba(255,255,255,.12);
+}
+.home-page .mobile-drawer a{
+  color: rgba(255,255,255,.92);
+}
+.home-page .mobile-drawer a:hover{
+  background: rgba(255,255,255,.08);
+}
+.home-page .mobile-drawer .nav-cta:hover{
+  color: var(--gold) !important;
+  background: rgba(255,255,255,.08);
+}
+
+@media (max-width: 1080px){
+  .home-page .brand{
+    min-width: 250px;
+  }
+  .home-page .nav-bilingual .nav-item{
+    min-width: 90px;
+  }
+  .home-page .nav-bilingual .nav-en{
+    font-size: 9px;
+    letter-spacing: 0.18em;
+  }
+  .home-page .nav-bilingual .nav-ko{
+    font-size: 10.6px;
+  }
+}
+
+@media (max-width: 900px){
+  .home-page .brand-textlogo{
+    height: 36px;
+  }
+}

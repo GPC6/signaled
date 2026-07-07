@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>관리자 | 시그널에듀케이션</title>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+
+  <link rel="stylesheet" href="admin.css" />
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">시그널에듀케이션 관리자</div>
+        <div class="pill">
+          <span id="statusText">로딩 준비</span>
+        </div>
+      </div>
+      <div class="tabs">
+        <button class="tab is-active" id="tabNews" type="button">공지사항 관리</button>
+        <button class="tab" id="tabReviews" type="button">후기 관리</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 로그인(간단 잠금) -->
+  <main id="loginView" class="login">
+    <div class="card">
+      <h1 class="title">관리자 로그인</h1>
+      <p class="sub">이 로그인은 “간단 잠금” 용도입니다(정적 사이트라 보안이 강하지 않습니다).</p>
+
+      <div class="mt-14">
+        <label for="pw">비밀번호</label>
+        <input id="pw" type="password" placeholder="비밀번호 입력" autocomplete="current-password" />
+      </div>
+
+      <div class="row mt-12">
+        <button class="btn primary" id="loginBtn" type="button">들어가기</button>
+        <button class="btn" id="logoutBtn" type="button">로그아웃</button>
+      </div>
+
+      <p class="notice mt-12">
+        ✅ 추천: 비밀번호는 개인용으로만 쓰고, 관리자 페이지 주소(/admin/admin.html)는 외부에 공유하지 마세요.
+      </p>
+    </div>
+  </main>
+
+  <!-- 관리자 본문 -->
+  <main id="adminView" class="hide">
+    <div class="wrap">
+      <!-- 공지 -->
+      <section id="newsPanel" class="grid">
+        <div class="card">
+          <div class="row space">
+            <div>
+              <h2 class="title">공지사항(news.json)</h2>
+              <p class="sub">추가/수정/삭제 후 “다운로드” 눌러서 <span class="badge">data/news.json</span>으로 덮어쓰기 업로드하세요.</p>
+            </div>
+            <div class="row">
+              <button class="btn small" id="newsReload" type="button">불러오기</button>
+              <button class="btn small" id="newsAdd" type="button">새 공지 추가</button>
+              <button class="btn small primary" id="newsDownload" type="button">news.json 다운로드</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th class="w-120">날짜</th>
+                <th>제목</th>
+                <th class="w-120">태그</th>
+                <th class="w-80">고정</th>
+                <th class="w-160">작업</th>
+              </tr>
+            </thead>
+            <tbody id="newsTbody"></tbody>
+          </table>
+        </div>
+
+        <div class="card" id="newsEditorCard">
+          <h3 class="title title-sm">공지 편집</h3>
+          <p class="sub">ID는 고유해야 합니다. (예: 2026-01-09-1)</p>
+
+          <div class="cols3 mt-12">
+            <div>
+              <label>ID</label>
+              <input id="news_id" placeholder="예: 2026-01-09-1" />
+            </div>
+            <div>
+              <label>날짜(YYYY-MM-DD)</label>
+              <input id="news_date" placeholder="2026-01-09" />
+            </div>
+            <div>
+              <label>태그(선택)</label>
+              <input id="news_tag" placeholder="예: 상담, 모집, 안내" />
+            </div>
+          </div>
+
+          <div class="cols mt-12">
+            <div>
+              <label>제목</label>
+              <input id="news_title" placeholder="공지 제목" />
+            </div>
+            <div>
+              <label>요약(summary)</label>
+              <input id="news_summary" placeholder="목록/상세 상단에 보여줄 짧은 요약" />
+            </div>
+          </div>
+
+          <div class="mt-12">
+            <label>본문(content)</label>
+            <textarea id="news_content" placeholder="공지 내용을 입력하세요"></textarea>
+          </div>
+
+          <div class="row mt-12">
+            <label class="check-label">
+              <input class="check-input" type="checkbox" id="news_pinned" />
+              상단 고정(pinned)
+            </label>
+          </div>
+
+          <div class="row mt-14">
+            <button class="btn primary" id="newsSave" type="button">저장(목록 반영)</button>
+            <button class="btn danger" id="newsDelete" type="button">삭제</button>
+            <span class="muted" id="newsHint"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 후기 -->
+      <section id="reviewsPanel" class="grid hide">
+        <div class="card">
+          <div class="row space">
+            <div>
+              <h2 class="title">후기(reviews.json)</h2>
+              <p class="sub">포스터/통지서 이미지만 바꿔도 페이지가 갱신됩니다. 저장 후 “다운로드” → <span class="badge">data/reviews.json</span> 덮어쓰기 업로드.</p>
+            </div>
+            <div class="row">
+              <button class="btn small" id="reviewsReload" type="button">불러오기</button>
+              <button class="btn small" id="posterAdd" type="button">포스터 추가</button>
+              <button class="btn small primary" id="reviewsDownload" type="button">reviews.json 다운로드</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="title title-sm">포스터 목록</h3>
+          <p class="sub">이미지 경로는 예: <span class="badge">images/placeholder.svg</span></p>
+          <div id="posterList" class="mt-10"></div>
+        </div>
+
+        <div class="card">
+          <h3 class="title title-sm">합격통지서(마퀴)</h3>
+          <div class="cols mt-12">
+            <div>
+              <div class="row space">
+                <div>
+                  <div class="badge">윗줄(certTop)</div>
+                </div>
+                <button class="btn small" id="certTopAdd" type="button">추가</button>
+              </div>
+              <div id="certTopList" class="mt-10"></div>
+            </div>
+
+            <div>
+              <div class="row space">
+                <div>
+                  <div class="badge">아랫줄(certBottom)</div>
+                </div>
+                <button class="btn small" id="certBottomAdd" type="button">추가</button>
+              </div>
+              <div id="certBottomList" class="mt-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="card">
+        <p class="notice m-0">
+          📌 업로드 팁: GitHub Pages라면 저장소에서 <span class="badge">data/news.json</span> / <span class="badge">data/reviews.json</span> 파일을
+          “Upload files”로 덮어쓰면 바로 반영됩니다(캐시가 있으면 새로고침 Ctrl+F5).
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="admin.js" defer></script>
+</body>
+</html>

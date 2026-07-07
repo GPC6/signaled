@@ -1,0 +1,52 @@
+{
+  "posters": [
+    {
+      "id": "r1",
+      "year": "2026",
+      "mid": "학생부 전략 · 면접",
+      "bottom": "합격",
+      "image": "images/placeholder.svg",
+      "link": "#",
+      "category": "전체"
+    },
+    {
+      "id": "r2",
+      "year": "2026",
+      "mid": "진로 로드맵",
+      "bottom": "합격",
+      "image": "images/placeholder.svg",
+      "link": "#",
+      "category": "전체"
+    },
+    {
+      "id": "r3",
+      "year": "2025",
+      "mid": "자소서 · 포트폴리오",
+      "bottom": "합격",
+      "image": "images/placeholder.svg",
+      "link": "#",
+      "category": "전체"
+    },
+    {
+      "id": "r4",
+      "year": "2025",
+      "mid": "학습관리",
+      "bottom": "합격",
+      "image": "images/placeholder.svg",
+      "link": "#",
+      "category": "전체"
+    }
+  ],
+  "certTop": [
+    { "image": "images/placeholder.svg", "alt": "통지서 1" },
+    { "image": "images/placeholder.svg", "alt": "통지서 2" },
+    { "image": "images/placeholder.svg", "alt": "통지서 3" },
+    { "image": "images/placeholder.svg", "alt": "통지서 4" }
+  ],
+  "certBottom": [
+    { "image": "images/placeholder.svg", "alt": "통지서 5" },
+    { "image": "images/placeholder.svg", "alt": "통지서 6" },
+    { "image": "images/placeholder.svg", "alt": "통지서 7" },
+    { "image": "images/placeholder.svg", "alt": "통지서 8" }
+  ]
+}

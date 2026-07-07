@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>소식·상담 | 시그널에듀케이션</title>
+  <meta name="description" content="시그널에듀케이션 소식·상담 안내" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body id="top" class="has-overlay-header">
+  <div id="site-header"></div>
+<main>
+    <section class="edu-hero" aria-label="페이지 헤더">
+      <div class="edu-hero-bg is-placeholder"></div>
+      <div class="edu-hero-overlay"></div>
+      <div class="container edu-hero-inner">
+        <p class="edu-hero-eyebrow">NEWS & CONTACT</p>
+        <h1 class="edu-hero-title">소식·상담</h1>
+      </div>
+    </section>
+
+    <section class="page-subnav-wrap">
+      <div class="container">
+        <nav class="page-subnav" aria-label="소식 상담 하위 메뉴">
+          <a href="#notice">공지사항</a>
+          <a href="#consultation">상담 안내</a>
+          <a href="#location">오시는 길</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section" id="notice">
+      <div class="container">
+        <div class="section-head section-head-row">
+          <div>
+            <h2 class="section-title">공지사항</h2>
+            <p class="section-sub">홈페이지 공지와 프로그램 안내를 게시하는 기본 게시판입니다.</p>
+          </div>
+          <a class="link-more" href="../index.html#news">메인 소식 영역 보기 →</a>
+        </div>
+        <div class="news-list" id="newsList" aria-live="polite"></div>
+        <div id="newsError" class="news-error">
+          <div class="card">
+            <h3 class="news-error-title">공지 데이터를 불러오지 못했습니다.</h3>
+            <p class="news-error-text">잠시 후 다시 시도해주세요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="consultation">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">상담 안내</h2>
+          <p class="section-sub">상담 전 확인하면 좋은 절차와 준비 사항, 문의 채널을 정리했습니다.</p>
+        </div>
+        <div class="contact-guide-grid">
+          <article class="contact-guide-card">
+            <span>01</span>
+            <h3>상담 대상</h3>
+            <p>초·중·고 학생, 학부모, 학교 및 기관 담당자를 대상으로 상담과 제휴 문의를 운영합니다.</p>
+          </article>
+          <article class="contact-guide-card">
+            <span>02</span>
+            <h3>상담 방식</h3>
+            <p>전화, 이메일, 방문 상담을 기본으로 하며 학교·기관 프로그램은 별도 일정 조율 후 진행합니다.</p>
+          </article>
+          <article class="contact-guide-card">
+            <span>03</span>
+            <h3>준비 자료</h3>
+            <p>학생 학년, 현재 고민, 관심 분야, 상담 희망 내용을 간단히 정리해 오시면 더 정확하게 안내할 수 있습니다.</p>
+          </article>
+          <article class="contact-guide-card">
+            <span>04</span>
+            <h3>운영 시간</h3>
+            <p>오전 10:00 ~ 오후 06:00 / 점심시간 12:00 ~ 오후 1:30 기준으로 상담 일정을 조율합니다.</p>
+          </article>
+        </div>
+        <div class="contact-channel-box">
+          <div>
+            <p class="consult-kicker">CONTACT CHANNEL</p>
+            <h3>상담 목적을 알려주시면 적합한 프로그램으로 연결합니다.</h3>
+            <p>진로·진학 상담, AI 커넥츠 활용, 학교·기관 제휴 문의를 구분해 남겨주시면 담당자가 확인 후 안내합니다.</p>
+          </div>
+          <a class="btn btn-primary" href="tel:010-6591-9592">전화 문의</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt contact-location-section" id="location">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">오시는 길</h2>
+          <p class="section-sub">방문 상담은 사전 예약제로 운영됩니다. 방문 전 상담 일정과 위치를 확인해 주세요.</p>
+        </div>
+        <div class="contact-location-grid">
+          <div class="contact-map-card" aria-label="시그널에듀 위치 안내">
+            <div class="contact-map-grid"></div>
+            <div class="contact-map-route route-a"></div>
+            <div class="contact-map-route route-b"></div>
+            <div class="contact-map-pin"></div>
+          </div>
+          <div class="contact-location-info">
+            <article>
+              <span>ADDRESS</span>
+              <h3>광주 서구 유림로 98번길 49, 4층</h3>
+              <p>대중교통 또는 자차 방문 시 건물 위치를 먼저 확인해 주세요.</p>
+            </article>
+            <article>
+              <span>RESERVATION</span>
+              <h3>방문 상담은 예약 후 진행</h3>
+              <p>상담 준비를 위해 학생 상황과 상담 목적을 사전에 확인합니다.</p>
+            </article>
+            <article>
+              <span>CONTACT</span>
+              <h3>대표전화 010-6591-9592</h3>
+              <p>학교·기관 제휴 문의는 운영 목적, 예상 인원, 희망 일정을 함께 전달해 주세요.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="site-footer"></div>
+</main>
+  <script src="../components.js" defer></script>
+  <script src="../main.js" defer></script>
+</body>
+</html>

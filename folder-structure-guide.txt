@@ -1,0 +1,11 @@
+signal-edu-site/
+├─ index.html
+├─ style.css
+├─ main.js
+├─ consulting/
+│  ├─ index.html
+│  ├─ career-design.html
+│  ├─ pathway-design.html
+│  ├─ admission-strategy.html
+│  └─ learning-coaching.html
+└─ ...

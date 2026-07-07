@@ -1,0 +1,1824 @@
+/* =========================
+   Signal Edu page-only design overrides
+   - 메인페이지 영향 없음
+   - signal-edu/index.html 에서만 추가 로드
+========================= */
+
+.signal-people .section-head{
+  margin-bottom: 30px;
+}
+
+.signal-people .section-title{
+  color:#0f172a;
+  letter-spacing:-.05em;
+}
+
+.signal-people .section-sub{
+  max-width: 760px;
+  color:#5b6472;
+}
+
+.signal-people-grid.signal-consultant-grid{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:22px;
+  align-items:stretch;
+}
+
+.signal-consultant-card{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  padding:0;
+  overflow:hidden;
+  border-radius:28px;
+  background:#fff;
+  border:1px solid rgba(15,23,42,.08);
+  box-shadow:0 20px 52px rgba(15,23,42,.07);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.signal-consultant-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(24,64,127,.22);
+  box-shadow:0 28px 72px rgba(15,23,42,.12);
+}
+
+.signal-consultant-photo{
+  position:relative;
+  display:block;
+  width:100%;
+  height:220px;
+  padding:0;
+  margin:0;
+  border:0;
+  border-radius:0;
+  overflow:hidden;
+  background:#e9e2d6;
+  cursor:pointer;
+}
+
+.signal-consultant-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .35s ease, filter .35s ease;
+}
+
+.signal-consultant-card:hover .signal-consultant-photo img{
+  transform:scale(1.045);
+  filter:saturate(1.02) contrast(1.02);
+}
+
+.signal-photo-hint{
+  position:absolute;
+  right:14px;
+  bottom:14px;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(15,23,42,.78);
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:-.02em;
+  opacity:0;
+  transform:translateY(6px);
+  transition:.22s ease;
+  backdrop-filter:blur(8px);
+}
+
+.signal-consultant-photo:hover .signal-photo-hint,
+.signal-consultant-photo:focus-visible .signal-photo-hint{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.signal-consultant-card .signal-person-body{
+  padding:24px 22px 26px;
+}
+
+.signal-consultant-card .signal-person-role{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:6px 11px;
+  border-radius:999px;
+  background:rgba(24,64,127,.08);
+  color:#18407f;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:-.02em;
+}
+
+.signal-consultant-card h3{
+  margin:14px 0 8px;
+  font-size:24px;
+  line-height:1.25;
+  letter-spacing:-.06em;
+  color:#111827;
+}
+
+.signal-consultant-card .signal-person-field{
+  margin:0 0 18px;
+  color:#2f3a4a;
+  font-size:15px;
+  font-weight:800;
+  line-height:1.55;
+  word-break:keep-all;
+}
+
+.signal-consultant-card ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:10px;
+}
+
+.signal-consultant-card li{
+  position:relative;
+  padding-left:16px;
+  color:#5b6472;
+  font-size:14px;
+  line-height:1.65;
+  word-break:keep-all;
+}
+
+.signal-consultant-card li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.72em;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#b89455;
+}
+
+.signal-profile-spotlight[hidden]{
+  display:none !important;
+}
+
+.signal-profile-spotlight{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(340px, 1fr) minmax(420px, 1fr);
+  gap:0;
+  margin:0 0 34px;
+  overflow:hidden;
+  border-radius:30px;
+  background:#342b21;
+  border:1px solid rgba(184,148,85,.38);
+  box-shadow:0 30px 90px rgba(15,23,42,.18);
+}
+
+.signal-profile-photo-wrap{
+  min-height:430px;
+  background:#ece4d8;
+}
+
+.signal-profile-photo{
+  width:100%;
+  height:100%;
+  min-height:430px;
+  object-fit:cover;
+}
+
+.signal-profile-panel{
+  padding:54px 56px 48px;
+  color:#fff;
+}
+
+.signal-profile-role{
+  display:inline-flex;
+  padding:7px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  color:#e6c982;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:-.02em;
+}
+
+.signal-profile-name{
+  margin:20px 0 10px;
+  color:#fff;
+  font-size:clamp(34px, 4vw, 54px);
+  line-height:1.08;
+  letter-spacing:-.08em;
+}
+
+.signal-profile-field{
+  margin:0 0 26px;
+  color:#f2eadf;
+  font-size:18px;
+  font-weight:800;
+  line-height:1.55;
+  word-break:keep-all;
+}
+
+.signal-profile-intro{
+  padding-top:26px;
+  border-top:1px solid rgba(255,255,255,.16);
+}
+
+.signal-profile-intro p{
+  margin:0 0 12px;
+  color:rgba(255,255,255,.78);
+  font-size:16px;
+  line-height:1.85;
+  word-break:keep-all;
+}
+
+.signal-profile-info{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin:28px 0 0;
+}
+
+.signal-profile-info div{
+  padding:18px;
+  border-radius:18px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.10);
+}
+
+.signal-profile-info dt{
+  margin:0 0 8px;
+  color:#e6c982;
+  font-size:13px;
+  font-weight:900;
+}
+
+.signal-profile-info dd{
+  margin:0;
+  color:rgba(255,255,255,.82);
+  font-size:14px;
+  line-height:1.65;
+  word-break:keep-all;
+}
+
+.signal-profile-close{
+  position:absolute;
+  top:18px;
+  right:18px;
+  z-index:2;
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:50%;
+  background:rgba(255,255,255,.10);
+  color:#fff;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
+  transition:.18s ease;
+}
+
+.signal-profile-close:hover,
+.signal-profile-close:focus-visible{
+  background:rgba(255,255,255,.20);
+  transform:rotate(90deg);
+}
+
+@media (max-width:1180px){
+  .signal-people-grid.signal-consultant-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+  .signal-profile-spotlight{
+    grid-template-columns:1fr;
+  }
+  .signal-profile-photo-wrap,
+  .signal-profile-photo{
+    min-height:360px;
+  }
+}
+
+@media (max-width:720px){
+  .signal-people-grid.signal-consultant-grid{
+    grid-template-columns:1fr;
+  }
+  .signal-consultant-photo{
+    height:240px;
+  }
+  .signal-profile-panel{
+    padding:38px 24px 30px;
+  }
+  .signal-profile-info{
+    grid-template-columns:1fr;
+  }
+  .signal-profile-close{
+    top:12px;
+    right:12px;
+  }
+}
+
+/* =========================
+   Consultant card refinement v2
+   - 직책 배지 제거
+   - 이름 아래 전문 영역 태그형 박스 추가
+   - 주요 이력 3줄 입력 영역 정돈
+========================= */
+.signal-consultant-card{
+  border-radius:22px;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  overflow:visible;
+}
+
+.signal-consultant-card:hover{
+  transform:translateY(-3px);
+  border-color:transparent;
+  box-shadow:none;
+}
+
+.signal-consultant-photo{
+  height:272px;
+  border-radius:8px;
+  background:#e6ded1;
+  box-shadow:0 16px 34px rgba(15,23,42,.08);
+}
+
+.signal-consultant-card .signal-person-body{
+  padding:16px 8px 0;
+}
+
+.signal-consultant-card .signal-person-role,
+.signal-consultant-card .signal-person-field{
+  display:none !important;
+}
+
+.signal-consultant-card h3{
+  margin:0 0 10px;
+  font-size:24px;
+  line-height:1.18;
+  letter-spacing:-.055em;
+  color:#111827;
+}
+
+.signal-person-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:0 0 12px;
+}
+
+.signal-person-tags span{
+  display:inline-flex;
+  align-items:center;
+  min-height:24px;
+  padding:4px 8px;
+  border-radius:4px;
+  border:1px solid rgba(15,23,42,.18);
+  background:rgba(255,255,255,.62);
+  color:#334155;
+  font-size:12px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:-.025em;
+}
+
+.signal-person-career,
+.signal-consultant-card ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:4px;
+}
+
+.signal-person-career li,
+.signal-consultant-card li{
+  position:relative;
+  padding-left:0;
+  color:#111827;
+  font-size:14px;
+  font-weight:650;
+  line-height:1.55;
+  letter-spacing:-.035em;
+  word-break:keep-all;
+}
+
+.signal-person-career li::before,
+.signal-consultant-card li::before{
+  display:none;
+}
+
+.signal-photo-hint{
+  right:10px;
+  bottom:10px;
+  padding:6px 9px;
+  font-size:11px;
+}
+
+.signal-profile-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0 0 22px;
+}
+
+.signal-profile-tags span{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:7px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.92);
+  color:#3b2f24;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:-.03em;
+}
+
+@media (max-width: 1180px){
+  .signal-consultant-photo{height:250px;}
+}
+
+@media (max-width: 760px){
+  .signal-consultant-card .signal-person-body{padding:14px 4px 0;}
+  .signal-consultant-photo{height:300px;}
+}
+
+/* 상세 소개 화면에서도 직책 배지는 숨기고 이름을 위로 올림 */
+.signal-profile-role{
+  display:none !important;
+}
+.signal-profile-name{
+  margin-top:0;
+}
+
+/* =========================
+   Consultant list v3
+   - 전문 영역 태그 1~5개 자유 입력
+   - 조회/공감/상담수 표시
+   - 12명 단위 페이지 이동
+========================= */
+.signal-people-grid.signal-consultant-grid{
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:32px 20px;
+  align-items:start;
+}
+
+.signal-consultant-card[hidden]{
+  display:none !important;
+}
+
+.signal-consultant-photo{
+  width:100%;
+  height:272px;
+  border-radius:7px;
+  overflow:hidden;
+  background:#e8dfd2;
+  box-shadow:none;
+}
+
+.signal-consultant-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.signal-consultant-card .signal-person-body{
+  padding:14px 8px 0;
+}
+
+.signal-consultant-card h3{
+  margin:0 0 10px;
+  font-size:24px;
+  line-height:1.16;
+  letter-spacing:-.06em;
+  color:#111827;
+}
+
+.signal-person-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:0 0 12px;
+}
+
+.signal-person-tags span{
+  display:inline-flex;
+  align-items:center;
+  min-height:24px;
+  padding:4px 8px;
+  border-radius:4px;
+  border:1px solid rgba(15,23,42,.18);
+  background:rgba(255,255,255,.72);
+  color:#334155;
+  font-size:12px;
+  font-weight:750;
+  line-height:1;
+  letter-spacing:-.03em;
+  white-space:nowrap;
+}
+
+.signal-person-career{
+  margin:0 0 13px;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:5px;
+}
+
+.signal-person-career li{
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1;
+  color:#111827;
+  font-size:14px;
+  font-weight:650;
+  line-height:1.5;
+  letter-spacing:-.04em;
+  word-break:keep-all;
+}
+
+.signal-person-stats{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  margin-top:10px;
+}
+
+.signal-stat{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:#0f172a;
+  font-size:13px;
+  line-height:1;
+  cursor:pointer;
+}
+
+.signal-stat-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:16px;
+  height:16px;
+  color:#0f172a;
+  font-size:16px;
+  line-height:1;
+}
+
+.signal-stat-count{
+  min-width:10px;
+  font-size:13px;
+  font-weight:650;
+  color:#0f172a;
+}
+
+.signal-stat:hover .signal-stat-icon,
+.signal-stat:focus-visible .signal-stat-icon{
+  transform:translateY(-1px);
+}
+
+.signal-stat-consult:not(.is-admin-enabled){
+  cursor:not-allowed;
+  opacity:.72;
+}
+
+.signal-consultant-pagination{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-top:42px;
+  padding-top:26px;
+  border-top:1px solid rgba(15,23,42,.10);
+}
+
+.signal-consultant-pagination[hidden]{
+  display:none !important;
+}
+
+.signal-page-status,
+.signal-page-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.signal-page-select{
+  width:66px;
+  height:40px;
+  padding:0 10px;
+  border:1px solid rgba(15,23,42,.13);
+  border-radius:0;
+  background:#fff;
+  color:#111827;
+  font-size:14px;
+  font-weight:650;
+}
+
+.signal-page-total{
+  color:#111827;
+  font-size:14px;
+  font-weight:800;
+}
+
+.signal-page-btn,
+.signal-page-link{
+  min-height:40px;
+  padding:0 18px;
+  border:1px solid rgba(15,23,42,.12);
+  border-radius:8px;
+  background:#fff;
+  color:#111827;
+  font-size:14px;
+  font-weight:750;
+  cursor:pointer;
+}
+
+.signal-page-link{
+  border-color:transparent;
+  background:transparent;
+}
+
+.signal-page-btn:disabled,
+.signal-page-link:disabled{
+  opacity:.42;
+  cursor:not-allowed;
+}
+
+.signal-profile-tags span:nth-child(n+6),
+.signal-person-tags span:nth-child(n+6){
+  display:none;
+}
+
+@media (max-width:1180px){
+  .signal-people-grid.signal-consultant-grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width:860px){
+  .signal-people-grid.signal-consultant-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width:640px){
+  .signal-people-grid.signal-consultant-grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:22px 10px;
+  }
+  .signal-consultant-photo{
+    height:112px;
+    border-radius:6px;
+  }
+  .signal-consultant-card .signal-person-body{
+    padding:9px 0 0;
+  }
+  .signal-consultant-card h3{
+    margin-bottom:6px;
+    font-size:14px;
+    letter-spacing:-.055em;
+  }
+  .signal-person-tags{
+    gap:4px;
+    margin-bottom:7px;
+  }
+  .signal-person-tags span{
+    min-height:19px;
+    padding:3px 5px;
+    font-size:10px;
+  }
+  .signal-person-career{
+    gap:3px;
+    margin-bottom:8px;
+  }
+  .signal-person-career li{
+    font-size:11px;
+    line-height:1.35;
+  }
+  .signal-person-stats{
+    gap:6px;
+    margin-top:6px;
+  }
+  .signal-stat{
+    gap:2px;
+  }
+  .signal-stat-icon{
+    width:12px;
+    height:12px;
+    font-size:12px;
+  }
+  .signal-stat-count{
+    font-size:10px;
+  }
+  .signal-consultant-pagination{
+    align-items:stretch;
+    flex-direction:column;
+  }
+  .signal-page-actions{
+    justify-content:space-between;
+  }
+}
+
+/* =========================
+   Consultant popup refinement v4
+   - 반응 아이콘 선명화
+   - 상세 소개를 팝업 방식으로 표시
+   - 상세 상단: 이름 / 태그+반응 / 구분선 / 소개글
+   - 상세 하단: 이름~경력 정보 표시
+========================= */
+.signal-profile-open::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:9998;
+  background:rgba(15, 12, 9, .48);
+  backdrop-filter:blur(2px);
+}
+
+.signal-profile-spotlight{
+  position:fixed;
+  top:50%;
+  left:50%;
+  z-index:9999;
+  width:min(1320px, calc(100vw - 32px));
+  max-height:calc(100vh - 32px);
+  transform:translate(-50%, -50%);
+  grid-template-columns:minmax(340px, 1fr) minmax(420px, 1fr);
+  overflow:auto;
+  margin:0;
+}
+
+.signal-profile-photo-wrap,
+.signal-profile-panel{
+  min-height:430px;
+}
+
+.signal-profile-panel{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.signal-profile-name{
+  margin:0 0 12px;
+}
+
+.signal-profile-field{
+  margin:0 0 24px;
+  color:#f6efe4;
+}
+
+.signal-profile-meta-row{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px 20px;
+}
+
+.signal-profile-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0;
+}
+
+.signal-profile-stats{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  color:#fff;
+}
+
+.signal-profile-stats .signal-stat,
+.signal-profile-stats .signal-stat-count{
+  color:#fff;
+}
+
+.signal-profile-divider{
+  width:100%;
+  height:1px;
+  margin:26px 0 26px;
+  background:rgba(255,255,255,.17);
+}
+
+.signal-profile-intro{
+  padding-top:0;
+  border-top:0;
+}
+
+.signal-profile-detail{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 72px;
+  margin:0;
+  padding:30px 60px 38px;
+  border-top:1px solid rgba(255,255,255,.13);
+  background:#f6f2ea;
+}
+
+.signal-profile-detail div{
+  display:grid;
+  grid-template-columns:76px 1fr;
+  gap:14px;
+  padding:12px 0;
+}
+
+.signal-profile-detail dt{
+  color:#9b743c;
+  font-size:13px;
+  font-weight:850;
+  letter-spacing:-.04em;
+}
+
+.signal-profile-detail dd{
+  margin:0;
+  color:#111827;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.72;
+  word-break:keep-all;
+}
+
+.signal-profile-detail dd span{
+  display:block;
+}
+
+.signal-person-stats,
+.signal-profile-stats{
+  gap:10px;
+}
+
+.signal-stat{
+  min-height:22px;
+  border-radius:999px;
+  color:#111827;
+  font-size:13px;
+  font-weight:750;
+}
+
+.signal-stat-icon{
+  width:18px;
+  height:18px;
+  color:currentColor;
+}
+
+.signal-stat-icon svg{
+  display:block;
+  width:18px;
+  height:18px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2.15;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.signal-stat-like .signal-stat-icon svg{
+  stroke-width:2.25;
+}
+
+.signal-stat:hover,
+.signal-stat:focus-visible{
+  color:#8b5f2f;
+}
+
+.signal-stat-consult:not(.is-admin-enabled):hover,
+.signal-stat-consult:not(.is-admin-enabled):focus-visible{
+  color:#111827;
+}
+
+@media (max-width:900px){
+  .signal-profile-spotlight{
+    grid-template-columns:1fr;
+    width:min(720px, calc(100vw - 24px));
+  }
+  .signal-profile-photo-wrap,
+  .signal-profile-photo,
+  .signal-profile-panel{
+    min-height:320px;
+  }
+  .signal-profile-panel{
+    padding:38px 26px 30px;
+  }
+  .signal-profile-detail{
+    grid-template-columns:1fr;
+    padding:24px 26px 30px;
+    gap:0;
+  }
+}
+
+@media (max-width:640px){
+  .signal-profile-spotlight{
+    width:calc(100vw - 16px);
+    max-height:calc(100vh - 16px);
+    border-radius:22px;
+  }
+  .signal-profile-photo-wrap,
+  .signal-profile-photo{
+    min-height:240px;
+  }
+  .signal-profile-panel{
+    min-height:auto;
+    padding:32px 18px 24px;
+  }
+  .signal-profile-name{
+    font-size:32px;
+  }
+  .signal-profile-field{
+    font-size:15px;
+  }
+  .signal-profile-detail div{
+    grid-template-columns:64px 1fr;
+  }
+  .signal-profile-stats .signal-stat-icon,
+  .signal-profile-stats .signal-stat-icon svg{
+    width:16px;
+    height:16px;
+  }
+}
+
+/* =========================
+   Consultant popup refinement v5
+   - 상단 사진/소개 영역만 강조 박스 처리
+   - 하단 상세 정보는 박스 없이 라인만 표시
+   - 17명 샘플 기준 12명 + 5명 페이지 이동
+========================= */
+.signal-profile-spotlight{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  overflow:visible;
+}
+
+.signal-profile-hero-shell{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(420px, 1.04fr) minmax(420px, .96fr);
+  overflow:hidden;
+  border:3px solid rgba(167, 119, 67, .95);
+  border-radius:22px;
+  background:linear-gradient(90deg, #f0eadf 0 50%, #413122 50%, #34281e 100%);
+  box-shadow:0 28px 72px rgba(0,0,0,.18);
+}
+
+.signal-profile-photo-wrap{
+  min-height:470px;
+  background:#ece5d9;
+  border-right:1px solid rgba(140, 103, 57, .28);
+}
+
+.signal-profile-photo{
+  min-height:470px;
+}
+
+.signal-profile-panel{
+  min-height:470px;
+  padding:44px 52px 40px;
+}
+
+.signal-profile-name{
+  margin:0 0 16px;
+}
+
+.signal-profile-field{
+  margin:0 0 20px;
+  color:#fff9f0;
+  font-size:17px;
+  font-weight:700;
+  line-height:1.58;
+}
+
+.signal-profile-meta-row{
+  align-items:center;
+  gap:12px 14px;
+}
+
+.signal-profile-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0;
+  flex:1 1 auto;
+}
+
+.signal-profile-tags span{
+  min-height:30px;
+  padding:7px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.94);
+  color:#5d4b3a;
+  font-size:14px;
+  font-weight:800;
+}
+
+.signal-profile-stats{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+}
+
+.signal-profile-stats .signal-stat,
+.signal-profile-stats .signal-stat-count,
+.signal-profile-stats .signal-stat-icon{
+  color:#fff;
+}
+
+.signal-stat,
+.signal-profile-stats .signal-stat{
+  gap:6px;
+}
+
+.signal-stat-icon,
+.signal-stat-icon svg{
+  width:18px;
+  height:18px;
+}
+
+.signal-stat-icon svg{
+  stroke-width:2.3;
+}
+
+.signal-profile-divider{
+  margin:22px 0 22px;
+  background:rgba(255,255,255,.18);
+}
+
+.signal-profile-intro p{
+  color:rgba(255,255,255,.88);
+}
+
+.signal-profile-detail{
+  grid-column:auto;
+  margin:0;
+  padding:0 4px;
+  background:transparent !important;
+  border-top:0 !important;
+  border-radius:0;
+  box-shadow:none;
+  gap:0 64px;
+}
+
+.signal-profile-detail div{
+  display:grid;
+  grid-template-columns:76px 1fr;
+  gap:12px;
+  padding:18px 0 14px;
+  border-top:1px solid rgba(15,23,42,.12);
+  background:transparent;
+}
+
+.signal-profile-detail dt{
+  color:#a1783d;
+  font-size:13px;
+  font-weight:850;
+}
+
+.signal-profile-detail dd{
+  color:#111827;
+  font-size:15px;
+  font-weight:650;
+  line-height:1.7;
+}
+
+.signal-consultant-pagination{
+  margin-top:36px;
+}
+
+@media (max-width: 1100px){
+  .signal-profile-hero-shell{
+    grid-template-columns:1fr;
+    background:linear-gradient(180deg, #f0eadf 0 46%, #413122 46%, #34281e 100%);
+  }
+  .signal-profile-photo-wrap,
+  .signal-profile-photo,
+  .signal-profile-panel{
+    min-height:360px;
+  }
+}
+
+@media (max-width: 700px){
+  .signal-profile-panel{
+    padding:30px 20px 24px;
+  }
+  .signal-profile-detail{
+    grid-template-columns:1fr;
+    gap:0;
+    padding:0 2px;
+  }
+  .signal-profile-detail div{
+    grid-template-columns:70px 1fr;
+  }
+}
+
+
+/* =========================
+   Consultant popup refinement v6
+   - 상세 하단 정보 가독성 강화 (흰색)
+   - 소개선 위치를 위쪽 1/3 지점으로 조정
+   - 페이지 이동을 버튼형으로 단순화
+========================= */
+.signal-profile-open::before{
+  background:rgba(15, 12, 9, .58);
+}
+
+.signal-profile-panel{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+.signal-profile-name{
+  margin:0 0 14px;
+  font-size:clamp(32px, 3.6vw, 52px);
+}
+
+.signal-profile-field{
+  margin:0 0 16px;
+  font-size:16px;
+  line-height:1.55;
+}
+
+.signal-profile-meta-row{
+  margin-bottom:0;
+}
+
+.signal-profile-divider{
+  margin:18px 0 18px;
+}
+
+.signal-profile-intro{
+  flex:1 1 auto;
+}
+
+.signal-profile-intro p{
+  font-size:15px;
+  line-height:1.95;
+}
+
+.signal-profile-detail{
+  background:transparent !important;
+  color:#fff;
+}
+
+.signal-profile-detail div{
+  border-top:1px solid rgba(255,255,255,.22);
+}
+
+.signal-profile-detail dt{
+  color:#ddb56e;
+}
+
+.signal-profile-detail dd,
+.signal-profile-detail dd span{
+  color:#fff;
+  font-weight:600;
+}
+
+.signal-consultant-pagination{
+  padding-top:18px;
+  border-top:1px solid rgba(15,23,42,.10);
+}
+
+.signal-page-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.signal-page-nav,
+.signal-page-number{
+  min-width:44px;
+  height:42px;
+  padding:0 14px;
+  border:1px solid rgba(15,23,42,.14);
+  border-radius:10px;
+  background:#fff;
+  color:#111827;
+  font-size:14px;
+  font-weight:750;
+  cursor:pointer;
+}
+
+.signal-page-nav:disabled,
+.signal-page-number:disabled{
+  opacity:.42;
+  cursor:not-allowed;
+}
+
+.signal-page-numbers{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.signal-page-number.is-active{
+  background:#3b2b1f;
+  border-color:#3b2b1f;
+  color:#fff;
+}
+
+.signal-page-number[aria-current="page"]{
+  background:#3b2b1f;
+  border-color:#3b2b1f;
+  color:#fff;
+}
+
+@media (max-width: 700px){
+  .signal-profile-detail dt{
+    font-size:12px;
+  }
+  .signal-profile-detail dd,
+  .signal-profile-detail dd span{
+    font-size:14px;
+    line-height:1.65;
+  }
+  .signal-page-wrap{
+    gap:8px;
+  }
+  .signal-page-nav,
+  .signal-page-number{
+    height:38px;
+    padding:0 11px;
+    font-size:13px;
+  }
+}
+
+
+/* =========================
+   Signal Edu philosophy redesign
+========================= */
+.signal-philosophy{
+  background:#f7f4ef;
+}
+
+.signal-philosophy-head{
+  margin-bottom:34px;
+}
+
+.signal-philosophy-head .section-title{
+  position:relative;
+  padding-bottom:28px;
+  margin-bottom:18px;
+  color:#111827;
+  letter-spacing:-.06em;
+}
+
+.signal-philosophy-head .section-title::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:58px;
+  height:4px;
+  border-radius:999px;
+  background:#c4a463;
+}
+
+.signal-philosophy-head .section-sub{
+  max-width:980px;
+  color:#4b5563;
+  font-size:17px;
+  line-height:1.9;
+}
+
+.signal-philosophy-layout{
+  display:grid;
+  grid-template-columns:minmax(0, 1.28fr) minmax(360px, .92fr);
+  gap:28px;
+  align-items:start;
+}
+
+.signal-philosophy-principles{
+  display:grid;
+  gap:16px;
+}
+
+.signal-principle-card{
+  display:grid;
+  grid-template-columns:88px 86px minmax(0,1fr);
+  align-items:center;
+  gap:24px;
+  padding:22px 28px 22px 0;
+  background:#fff;
+  border:1px solid rgba(17,24,39,.06);
+  border-radius:24px;
+  box-shadow:0 14px 34px rgba(17,24,39,.05);
+}
+
+.signal-principle-index{
+  align-self:stretch;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  line-height:1;
+  color:#c4a463;
+  font-family:"Noto Serif KR", serif;
+  border-right:1px solid rgba(17,24,39,.12);
+}
+
+.signal-principle-icon,
+.signal-value-flow-icon{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f6f1e8;
+  color:#c4a463;
+  flex:none;
+}
+
+.signal-principle-icon svg,
+.signal-value-flow-icon svg{
+  width:34px;
+  height:34px;
+}
+
+.signal-principle-body h3{
+  margin:0 0 8px;
+  font-size:22px;
+  line-height:1.34;
+  letter-spacing:-.05em;
+  color:#111827;
+}
+
+.signal-principle-body p{
+  margin:0;
+  color:#4b5563;
+  font-size:17px;
+  line-height:1.78;
+  word-break:keep-all;
+}
+
+.signal-value-flow-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:18px 22px;
+}
+
+.signal-value-flow-card{
+  position:relative;
+  min-height:286px;
+  padding:32px 28px 30px;
+  background:#fff;
+  border:1px solid rgba(17,24,39,.06);
+  border-radius:28px;
+  box-shadow:0 16px 38px rgba(17,24,39,.05);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  text-align:center;
+}
+
+.signal-value-flow-card strong{
+  display:block;
+  margin:20px 0 22px;
+  font-size:24px;
+  line-height:1.2;
+  letter-spacing:-.05em;
+  color:#111827;
+}
+
+.signal-value-flow-card strong::after{
+  content:"";
+  display:block;
+  width:44px;
+  height:3px;
+  margin:16px auto 0;
+  border-radius:999px;
+  background:#c4a463;
+}
+
+.signal-value-flow-card span{
+  color:#4b5563;
+  font-size:17px;
+  line-height:1.8;
+  word-break:keep-all;
+}
+
+.signal-value-flow-card.is-understand::after,
+.signal-value-flow-card.is-action::after{
+  content:"···›";
+  position:absolute;
+  top:50%;
+  right:-22px;
+  transform:translateY(-50%);
+  color:#c4a463;
+  font-size:34px;
+  letter-spacing:2px;
+  font-weight:700;
+  z-index:2;
+}
+
+.signal-value-flow-card.is-understand::before,
+.signal-value-flow-card.is-connect::before{
+  content:"·\A·\A·\A⌄";
+  white-space:pre;
+  position:absolute;
+  left:50%;
+  bottom:-38px;
+  transform:translateX(-50%);
+  color:#c4a463;
+  font-size:28px;
+  line-height:.55;
+  font-weight:700;
+  z-index:2;
+}
+
+@media (max-width: 1180px){
+  .signal-philosophy-layout{
+    grid-template-columns:1fr;
+  }
+
+  .signal-value-flow-grid{
+    max-width:780px;
+  }
+}
+
+@media (max-width: 840px){
+  .signal-principle-card{
+    grid-template-columns:72px 68px minmax(0,1fr);
+    gap:18px;
+    padding:18px 20px 18px 0;
+  }
+
+  .signal-principle-index{
+    font-size:24px;
+  }
+
+  .signal-principle-icon,
+  .signal-value-flow-icon{
+    width:60px;
+    height:60px;
+  }
+
+  .signal-principle-icon svg,
+  .signal-value-flow-icon svg{
+    width:28px;
+    height:28px;
+  }
+
+  .signal-principle-body h3,
+  .signal-value-flow-card strong{
+    font-size:20px;
+  }
+
+  .signal-principle-body p,
+  .signal-value-flow-card span,
+  .signal-philosophy-head .section-sub{
+    font-size:16px;
+  }
+}
+
+@media (max-width: 680px){
+  .signal-philosophy-head .section-title{
+    padding-bottom:20px;
+  }
+
+  .signal-principle-card{
+    grid-template-columns:1fr;
+    gap:14px;
+    padding:18px;
+  }
+
+  .signal-principle-index{
+    justify-content:flex-start;
+    padding-bottom:12px;
+    border-right:0;
+    border-bottom:1px solid rgba(17,24,39,.12);
+  }
+
+  .signal-value-flow-grid{
+    grid-template-columns:1fr;
+  }
+
+  .signal-value-flow-card{
+    min-height:auto;
+    padding:28px 22px;
+  }
+
+  .signal-value-flow-card.is-understand::after,
+  .signal-value-flow-card.is-action::after,
+  .signal-value-flow-card.is-understand::before,
+  .signal-value-flow-card.is-connect::before{
+    content:none;
+  }
+}
+
+/* =====================================
+   Impeccable bolder pass for Signal Edu page
+   Make this page feel like a brand dossier, not a card collection.
+===================================== */
+.signal-intro-block{
+  grid-template-columns:minmax(340px, .82fr) minmax(0, 1fr);
+  gap:clamp(28px, 5vw, 76px);
+  align-items:center;
+  padding:clamp(30px, 5vw, 66px) 0;
+  border-top:1px solid rgba(47,40,31,.16);
+  border-bottom:1px solid rgba(47,40,31,.16);
+}
+
+.about-founder-media--document{
+  min-height:460px;
+  border-radius:14px;
+  border:1px solid rgba(47,40,31,.16);
+  box-shadow:none;
+  overflow:hidden;
+}
+
+.signal-document-visual{
+  height:100%;
+  min-height:460px;
+  border-radius:0;
+}
+
+.about-kicker{color:#8f6b3d;}
+
+.about-headline{
+  max-width:920px;
+  color:#15120e;
+  font-size:clamp(36px, 4.3vw, 66px);
+  line-height:1.08;
+  letter-spacing:-0.035em;
+  text-wrap:balance;
+}
+
+.about-text{max-width:76ch;}
+
+.about-text p{
+  color:#4f463a;
+  font-size:17px;
+  line-height:1.9;
+  text-wrap:pretty;
+}
+
+.signal-summary-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+  margin-top:42px;
+  border-top:2px solid #2f281f;
+}
+
+.signal-summary-card{
+  display:grid;
+  grid-template-columns:minmax(170px, .28fr) minmax(260px, .5fr) minmax(0, 1fr);
+  gap:clamp(18px, 3vw, 42px);
+  align-items:start;
+  padding:28px 0;
+  border:0;
+  border-bottom:1px solid rgba(47,40,31,.15);
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+
+.signal-summary-label{
+  color:#8f6b3d;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+
+.signal-summary-card h3{
+  margin:0;
+  color:#15120e;
+  font-size:clamp(24px, 2.3vw, 36px);
+  line-height:1.16;
+  letter-spacing:-0.035em;
+  text-wrap:balance;
+}
+
+.signal-summary-card p{
+  margin:0;
+  color:#4f463a;
+  font-size:16px;
+  line-height:1.78;
+}
+
+.signal-philosophy-layout{
+  grid-template-columns:minmax(0, 1fr) minmax(330px, .52fr);
+  gap:clamp(32px, 5vw, 76px);
+}
+
+.signal-philosophy-principles{
+  gap:0;
+  border-top:2px solid #2f281f;
+}
+
+.signal-principle-card{
+  grid-template-columns:80px minmax(0, 1fr);
+  gap:24px;
+  padding:26px 0;
+  border:0;
+  border-bottom:1px solid rgba(47,40,31,.15);
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+
+.signal-principle-icon{display:none;}
+
+.signal-principle-index{
+  align-self:start;
+  justify-content:flex-start;
+  border-right:0;
+  color:#8f6b3d;
+  font-family:"Pretendard Variable", Pretendard, system-ui, sans-serif;
+  font-size:17px;
+  font-weight:900;
+}
+
+.signal-principle-body h3{
+  color:#15120e;
+  font-size:clamp(23px, 2vw, 32px);
+  letter-spacing:-0.03em;
+}
+
+.signal-principle-body p{color:#4f463a;}
+
+.signal-value-flow-grid{
+  grid-template-columns:1fr;
+  gap:0;
+  border:1px solid rgba(47,40,31,.16);
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.signal-value-flow-card{
+  min-height:auto;
+  display:grid;
+  grid-template-columns:72px minmax(0, 1fr);
+  gap:18px;
+  align-items:center;
+  padding:24px;
+  border:0;
+  border-bottom:1px solid rgba(47,40,31,.12);
+  border-radius:0;
+  box-shadow:none;
+  text-align:left;
+}
+
+.signal-value-flow-card:last-child{border-bottom:0;}
+
+.signal-value-flow-card::before,
+.signal-value-flow-card::after{
+  content:none !important;
+}
+
+.signal-value-flow-icon{
+  width:56px;
+  height:56px;
+  border-radius:12px;
+  background:#f5f3ef;
+  color:#8f6b3d;
+}
+
+.signal-value-flow-card strong{
+  margin:0 0 6px;
+  color:#15120e;
+  font-size:22px;
+}
+
+.signal-value-flow-card strong::after{display:none;}
+
+.signal-value-flow-card span{
+  color:#4f463a;
+  font-size:15px;
+}
+
+.signal-method-steps{
+  counter-reset:signal-method;
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:0;
+  border-top:1px solid rgba(47,40,31,.18);
+  border-bottom:1px solid rgba(47,40,31,.18);
+}
+
+.signal-method-card{
+  counter-increment:signal-method;
+  padding:28px 24px;
+  border:0;
+  border-right:1px solid rgba(47,40,31,.14);
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+
+.signal-method-card:last-child{border-right:0;}
+.signal-method-no{display:none;}
+
+.signal-method-card::before{
+  content:counter(signal-method, decimal-leading-zero);
+  display:block;
+  margin-bottom:26px;
+  color:#8f6b3d;
+  font-weight:900;
+}
+
+.signal-method-card h3{
+  color:#15120e;
+  font-size:22px;
+}
+
+.signal-method-banner{
+  margin-top:34px;
+  border-radius:14px;
+  background:#17130f;
+  box-shadow:none;
+}
+
+.signal-people-grid.signal-consultant-grid{
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+
+.signal-consultant-card{
+  border-radius:14px;
+  border:1px solid rgba(47,40,31,.14);
+  box-shadow:none;
+}
+
+.signal-consultant-card:hover{
+  transform:translateY(-2px);
+  box-shadow:none;
+}
+
+.signal-person-stats,
+.signal-profile-stats{
+  display:none !important;
+}
+
+.signal-profile-spotlight{
+  border-radius:14px;
+  box-shadow:none;
+}
+
+@media (max-width:1180px){
+  .signal-intro-block,
+  .signal-philosophy-layout{
+    grid-template-columns:1fr;
+  }
+
+  .signal-summary-card{
+    grid-template-columns:1fr;
+  }
+
+  .signal-method-steps{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+
+  .signal-method-card:nth-child(2){border-right:0;}
+
+  .signal-method-card:nth-child(n + 3){
+    border-top:1px solid rgba(47,40,31,.14);
+  }
+}
+
+@media (max-width:840px){
+  .signal-people-grid.signal-consultant-grid{
+    grid-template-columns:1fr;
+  }
+
+  .signal-method-steps{
+    grid-template-columns:1fr;
+  }
+
+  .signal-method-card{
+    border-right:0;
+    border-top:1px solid rgba(47,40,31,.14);
+  }
+
+  .signal-method-card:first-child{border-top:0;}
+}
+
+@media (max-width:680px){
+  .about-founder-media--document,
+  .signal-document-visual{
+    min-height:340px;
+  }
+
+  .about-headline{font-size:34px;}
+
+  .signal-principle-card,
+  .signal-value-flow-card{
+    grid-template-columns:1fr;
+  }
+}

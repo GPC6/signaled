@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>공지 상세 | 시그널에듀케이션</title>
+  <meta name="description" content="시그널에듀케이션 공지사항 상세" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../style.css" />
+
+  <link rel="stylesheet" href="../assets/css/06-news-detail.css" />
+</head>
+
+<body id="top" class="has-overlay-header">
+  <div id="site-header"></div>
+<main class="news-detail-page">
+    <!-- Page Hero (same size as about.html) -->
+    <section class="edu-hero" aria-label="페이지 헤더">
+      <div class="edu-hero-bg is-placeholder"></div>
+      <div class="edu-hero-overlay"></div>
+
+      <div class="container edu-hero-inner">
+        <p class="edu-hero-eyebrow">CONTACT</p>
+        <h1 class="edu-hero-title">공지 상세</h1>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="news-detail-wrap">
+          <div class="section-head">
+            <h2 class="section-title" id="newsTitle">공지 상세</h2>
+            <p class="section-sub" id="newsSub">공지 내용을 불러오는 중...</p>
+          </div>
+
+          <div class="news-meta">
+            <span id="newsDate">-</span>
+            <span id="newsTag" hidden></span>
+          </div>
+
+          <article class="news-detail-card" id="newsCard">
+            <div class="news-detail-body" id="newsBody"></div>
+
+            <div class="news-actions">
+              <a class="news-back" href="index.html">← 목록으로</a>
+              <button class="news-share" id="shareBtn" type="button">링크 복사</button>
+            </div>
+          </article>
+
+          <div id="newsNotFound" class="news-not-found" hidden>
+            해당 공지를 찾을 수 없습니다.
+            <a class="text-link" href="index.html">목록으로 이동</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="site-footer"></div>
+</main>
+
+  <script src="../components.js" defer></script>
+  <script src="../main.js" defer></script>
+
+  <script src="news-detail.js" defer></script>
+</body>
+</html>
+
+  
