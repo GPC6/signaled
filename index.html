@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=home-brand-20260707c" />
 </head>
 
 <body id="top" class="home-page">
@@ -23,9 +23,38 @@
   <div class="container arte-home-inner">
     <div class="arte-home-head is-hidden"></div>
 
+    <div class="home-hero-grid">
+      <div class="home-hero-copy">
+        <p class="home-hero-mark">SIGNAL EDUCATION</p>
+        <h1>학생의 신호를 읽고, 다음 선택을 설계합니다.</h1>
+        <p class="home-hero-desc">
+          시그널에듀케이션은 진로, 진학, 학습, AI 분석을 하나의 상담 흐름으로 연결해
+          학생과 학부모가 납득할 수 있는 실행 계획을 만듭니다.
+        </p>
+        <div class="home-hero-actions" aria-label="주요 이동">
+          <a class="home-hero-primary" href="consulting/">컨설팅 살펴보기</a>
+          <a class="home-hero-secondary" href="news-contact/#consultation">상담 안내</a>
+        </div>
+        <dl class="home-hero-notes" aria-label="시그널에듀 운영 기준">
+          <div>
+            <dt>진단</dt>
+            <dd>성향과 학습 이력</dd>
+          </div>
+          <div>
+            <dt>설계</dt>
+            <dd>전형과 진로 로드맵</dd>
+          </div>
+          <div>
+            <dt>동행</dt>
+            <dd>실행 점검과 피드백</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="home-hero-showcase">
     <div class="arte-carousel" id="arteCarousel">
       <a class="arte-card" href="signal-edu/" data-title="시그널에듀" data-desc="소개, 교육철학, 컨설턴트, 오시는 길을 확인할 수 있습니다.">
-        <div class="arte-card-visual visual-signal" aria-hidden="true">
+        <div class="arte-card-visual visual-signal" aria-hidden="true" data-placeholder="상담 현장 이미지 준비중">
           <span>INTRO</span>
           <strong>학생을 이해하는 상담 구조</strong>
           <em>소개 · 교육철학 · 컨설턴트</em>
@@ -36,7 +65,7 @@
         </div>
       </a>
       <a class="arte-card" href="consulting/" data-title="컨설팅 프로그램" data-desc="진로설계, 진학설계, 대입컨설팅, 학습검사·코칭을 한 페이지에서 비교합니다.">
-        <div class="arte-card-visual visual-consulting" aria-hidden="true">
+        <div class="arte-card-visual visual-consulting" aria-hidden="true" data-placeholder="컨설팅 이미지 준비중">
           <span>GUIDANCE</span>
           <strong>진로와 진학을 잇는 실행 로드맵</strong>
           <em>진로설계 · 대입컨설팅 · 코칭</em>
@@ -47,7 +76,7 @@
         </div>
       </a>
       <a class="arte-card" href="ai-connects/" data-title="AI 커넥츠" data-desc="중학교 성적분석, 고등학교 학생부 관리, 문해력·언어사전, 학생 분석을 확인합니다.">
-        <div class="arte-card-visual visual-ai" aria-hidden="true">
+        <div class="arte-card-visual visual-ai" aria-hidden="true" data-placeholder="AI 분석 화면 이미지 준비중">
           <span>AI CONNECTS</span>
           <strong>데이터를 상담 가능한 언어로 해석</strong>
           <em>성적분석 · 학생부 · 학생 분석</em>
@@ -58,7 +87,7 @@
         </div>
       </a>
       <a class="arte-card" href="partnerships/" data-title="학교·기관 연계" data-desc="학교 프로그램, 기관 프로그램, 학부모 특강, 교육행사 운영, 제휴 문의를 안내합니다.">
-        <div class="arte-card-visual visual-partner" aria-hidden="true">
+        <div class="arte-card-visual visual-partner" aria-hidden="true" data-placeholder="학교·기관 프로그램 이미지 준비중">
           <span>PARTNERSHIP</span>
           <strong>현장 목적에 맞춘 프로그램 운영</strong>
           <em>학교 · 기관 · 학부모 특강</em>
@@ -69,7 +98,7 @@
         </div>
       </a>
       <a class="arte-card" href="stories/" data-title="포트폴리오" data-desc="합격소식과 활동 갤러리로 실제 운영 결과를 확인합니다.">
-        <div class="arte-card-visual visual-portfolio" aria-hidden="true">
+        <div class="arte-card-visual visual-portfolio" aria-hidden="true" data-placeholder="활동 기록 이미지 준비중">
           <span>PORTFOLIO</span>
           <strong>합격소식과 활동 기록</strong>
           <em>합격소식 · 활동 갤러리</em>
@@ -80,7 +109,7 @@
         </div>
       </a>
       <a class="arte-card" href="news-contact/" data-title="상담·소식" data-desc="공지사항, 상담 안내, 오시는 길을 한 페이지에서 확인합니다.">
-        <div class="arte-card-visual visual-contact" aria-hidden="true">
+        <div class="arte-card-visual visual-contact" aria-hidden="true" data-placeholder="상담 공간 이미지 준비중">
           <span>CONTACT</span>
           <strong>상담 전 확인해야 할 운영 정보</strong>
           <em>공지사항 · 상담 안내 · 오시는 길</em>
@@ -99,6 +128,8 @@
           <button class="arte-btn" id="artePrev" aria-label="이전">‹</button>
           <button class="arte-btn" id="arteNext" aria-label="다음">›</button>
         </div>
+      </div>
+    </div>
       </div>
     </div>
   </div>
@@ -125,44 +156,37 @@
       <h2 class="section-title">필요한 내용을 한 페이지에서 확인하세요</h2>
       <p class="section-sub">시그널에듀의 주요 정보는 여섯 개 페이지 안에서 탭과 스크롤로 이어집니다.</p>
     </div>
-    <div class="menu-board-grid">
-      <article class="menu-board-card">
-        <span class="menu-board-label">시그널에듀</span>
-        <h3>회사와 사람을 먼저 확인합니다</h3>
-        <p>소개 · 교육철학 · 컨설턴트 · 오시는 길</p>
-        <a class="link-more" href="signal-edu/">시그널에듀 보기 →</a>
-      </article>
-      <article class="menu-board-card">
-        <span class="menu-board-label">컨설팅 프로그램</span>
-        <h3>상담 목적별 프로그램을 비교합니다</h3>
-        <p>진로설계 · 진학설계 · 대입컨설팅 · 학습검사·코칭</p>
-        <a class="link-more" href="consulting/">컨설팅 보기 →</a>
-      </article>
-
-      <article class="menu-board-card">
-        <span class="menu-board-label">AI 커넥츠</span>
-        <h3>데이터 분석을 상담과 연결합니다</h3>
-        <p>AI 커넥츠 소개 · 성적분석 · 학생부 관리 · 학생 분석</p>
-        <a class="link-more" href="ai-connects/">AI 서비스 보기 →</a>
-      </article>
-      <article class="menu-board-card">
-        <span class="menu-board-label">학교·기관 연계</span>
-        <h3>현장 목적에 맞춰 프로그램을 운영합니다</h3>
-        <p>학교 프로그램 · 기관 프로그램 · 학부모 특강 · 제휴 문의</p>
-        <a class="link-more" href="partnerships/">연계 프로그램 보기 →</a>
-      </article>
-      <article class="menu-board-card">
-        <span class="menu-board-label">포트폴리오</span>
-        <h3>결과와 활동 기록을 모아봅니다</h3>
-        <p>합격소식 · 활동 갤러리</p>
-        <a class="link-more" href="stories/">포트폴리오 보기 →</a>
-      </article>
-      <article class="menu-board-card">
-        <span class="menu-board-label">상담·소식</span>
-        <h3>상담 전 필요한 정보를 확인합니다</h3>
-        <p>공지사항 · 상담 안내 · 오시는 길</p>
-        <a class="link-more" href="news-contact/">상담 정보 보기 →</a>
-      </article>
+    <div class="home-directory-list">
+      <a class="home-directory-row" href="signal-edu/">
+        <span>시그널에듀</span>
+        <strong>회사와 사람을 먼저 확인합니다</strong>
+        <em>소개 · 교육철학 · 컨설턴트 · 오시는 길</em>
+      </a>
+      <a class="home-directory-row" href="consulting/">
+        <span>컨설팅 프로그램</span>
+        <strong>상담 목적별 프로그램을 비교합니다</strong>
+        <em>진로설계 · 진학설계 · 대입컨설팅 · 학습검사·코칭</em>
+      </a>
+      <a class="home-directory-row" href="ai-connects/">
+        <span>AI 커넥츠</span>
+        <strong>데이터 분석을 상담과 연결합니다</strong>
+        <em>성적분석 · 학생부 관리 · 학생 분석</em>
+      </a>
+      <a class="home-directory-row" href="partnerships/">
+        <span>학교·기관 연계</span>
+        <strong>현장 목적에 맞춰 프로그램을 운영합니다</strong>
+        <em>학교 프로그램 · 기관 프로그램 · 학부모 특강 · 제휴 문의</em>
+      </a>
+      <a class="home-directory-row" href="stories/">
+        <span>포트폴리오</span>
+        <strong>결과와 활동 기록을 모아봅니다</strong>
+        <em>합격소식 · 활동 갤러리</em>
+      </a>
+      <a class="home-directory-row" href="news-contact/">
+        <span>상담·소식</span>
+        <strong>상담 전 필요한 정보를 확인합니다</strong>
+        <em>공지사항 · 상담 안내 · 오시는 길</em>
+      </a>
     </div>
   </div>
 </section>
@@ -297,7 +321,7 @@
           <!-- 숫자/문구는 여기서 마음대로 수정 -->
           <div class="proof-metric" role="listitem">
             <div class="proof-metric-top">
-              <span class="proof-icon" aria-hidden="true">🏫</span>
+              <span class="proof-icon" aria-hidden="true">SE</span>
               <strong class="proof-label">연계 기관</strong>
             </div>
             <div class="proof-number">
@@ -308,7 +332,7 @@
 
           <div class="proof-metric" role="listitem">
             <div class="proof-metric-top">
-              <span class="proof-icon" aria-hidden="true">📄</span>
+              <span class="proof-icon" aria-hidden="true">PR</span>
               <strong class="proof-label">프로젝트</strong>
             </div>
             <div class="proof-number">
@@ -319,7 +343,7 @@
 
           <div class="proof-metric" role="listitem">
             <div class="proof-metric-top">
-              <span class="proof-icon" aria-hidden="true">⭐</span>
+              <span class="proof-icon" aria-hidden="true">FB</span>
               <strong class="proof-label">만족도</strong>
             </div>
             <div class="proof-number">
@@ -330,7 +354,7 @@
 
           <div class="proof-metric" role="listitem">
             <div class="proof-metric-top">
-              <span class="proof-icon" aria-hidden="true">🧩</span>
+              <span class="proof-icon" aria-hidden="true">TM</span>
               <strong class="proof-label">템플릿</strong>
             </div>
             <div class="proof-number">
@@ -370,31 +394,31 @@
           <p class="section-sub reveal">상담 이후 진행되는 핵심 프로그램을 한눈에 확인하세요.</p>
         </div>
 
-        <div class="program-grid">
-          <a class="card program-card reveal" href="consulting/#career">
-            <h3>진로설계</h3>
+        <div class="home-program-ledger">
+          <a class="home-program-row reveal" href="consulting/#career">
+            <span>진로설계</span>
             <p>학생의 성향과 강점을 바탕으로 진로 방향을 설계합니다.</p>
-            <span class="link">자세히 보기 →</span>
+            <b>보기</b>
           </a>
-          <a class="card program-card reveal" href="consulting/#pathway">
-            <h3>진학설계</h3>
+          <a class="home-program-row reveal" href="consulting/#pathway">
+            <span>진학설계</span>
             <p>학교생활과 과목 선택을 진학 목표와 연결합니다.</p>
-            <span class="link">자세히 보기 →</span>
+            <b>보기</b>
           </a>
-          <a class="card program-card reveal" href="consulting/#admission">
-            <h3>대입컨설팅</h3>
+          <a class="home-program-row reveal" href="consulting/#admission">
+            <span>대입컨설팅</span>
             <p>학생의 강점과 전형을 분석해 대입 지원 전략을 세웁니다.</p>
-            <span class="link">자세히 보기 →</span>
+            <b>보기</b>
           </a>
-          <a class="card program-card reveal" href="consulting/#coaching">
-            <h3>학습검사·코칭</h3>
+          <a class="home-program-row reveal" href="consulting/#coaching">
+            <span>학습검사·코칭</span>
             <p>학습 유형과 습관을 진단하고 자기주도학습을 코칭합니다.</p>
-            <span class="link">자세히 보기 →</span>
+            <b>보기</b>
           </a>
-          <a class="card program-card reveal" href="partnerships/">
-            <h3>학교/기관연계</h3>
+          <a class="home-program-row reveal" href="partnerships/">
+            <span>학교/기관연계</span>
             <p>학교/기관과 연계한 프로그램 운영 및 프로젝트를 진행합니다.</p>
-            <span class="link">자세히 보기 →</span>
+            <b>보기</b>
           </a>
         </div>
       </div>
