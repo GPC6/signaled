@@ -444,10 +444,16 @@
       const id = encodeURIComponent(n?.id ?? "");
       const date = String(n?.date ?? "");
       const title = String(n?.title ?? "");
+      const summary = String(n?.summary ?? "");
+      const tag = String(n?.tag ?? "");
       return `
         <a class="news-item" href="${detailPrefix}news-detail.html?id=${id}">
           <span class="news-date">${date}</span>
-          <span class="news-title">${title}</span>
+          <span class="news-title-wrap">
+            <span class="news-title">${title}</span>
+            ${summary ? `<span class="news-summary">${summary}</span>` : ""}
+          </span>
+          ${tag ? `<span class="news-tag">${tag}</span>` : ""}
         </a>
       `;
     }).join("");

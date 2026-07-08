@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../style.css?v=atlas-20260708" />
 </head>
-<body id="top" class="has-overlay-header">
+<body id="top" class="has-overlay-header news-contact-page">
   <div id="site-header"></div>
 <main>
     <section class="edu-hero" aria-label="페이지 헤더">
@@ -32,20 +32,34 @@
       </div>
     </section>
 
-    <section class="section" id="notice">
+    <section class="section notice-section" id="notice">
       <div class="container">
         <div class="section-head section-head-row">
           <div>
             <h2 class="section-title">공지사항</h2>
-            <p class="section-sub">홈페이지 공지와 프로그램 안내를 게시하는 기본 게시판입니다.</p>
+            <p class="section-sub">상담 전 확인하면 좋은 운영 소식과 프로그램 안내를 모았습니다.</p>
           </div>
           <a class="link-more" href="../index.html#news">메인 소식 영역 보기 →</a>
         </div>
-        <div class="news-list" id="newsList" aria-live="polite"></div>
-        <div id="newsError" class="news-error">
-          <div class="card">
-            <h3 class="news-error-title">공지 데이터를 불러오지 못했습니다.</h3>
-            <p class="news-error-text">잠시 후 다시 시도해주세요.</p>
+
+        <div class="notice-board">
+          <aside class="notice-board-intro" aria-label="공지사항 안내">
+            <p class="notice-board-label">SIGNAL NOTICE</p>
+            <h3>상담 전에 필요한 변화를 먼저 정리합니다.</h3>
+            <p>모집 일정, 운영 방식, 상담 가능 시간처럼 학생과 학부모가 바로 확인해야 할 내용을 가볍지만 분명하게 안내합니다.</p>
+            <div class="notice-board-visual" aria-hidden="true">
+              <span>공지 이미지 준비중</span>
+            </div>
+          </aside>
+
+          <div class="notice-board-list">
+            <div class="news-list" id="newsList" aria-live="polite"></div>
+            <div id="newsError" class="news-error">
+              <div class="card">
+                <h3 class="news-error-title">공지 데이터를 불러오지 못했습니다.</h3>
+                <p class="news-error-text">잠시 후 다시 시도해주세요.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
