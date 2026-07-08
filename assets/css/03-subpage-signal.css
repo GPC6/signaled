@@ -2203,6 +2203,9 @@
   grid-row:1 / span 2 !important;
   left:auto !important;
   top:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  transform:none !important;
   display:grid !important;
   place-items:center !important;
   width:var(--flow-marker) !important;
@@ -2215,6 +2218,8 @@
   font-size:12px !important;
   font-weight:900 !important;
   letter-spacing:.04em !important;
+  line-height:1 !important;
+  white-space:normal !important;
 }
 
 .signal-value-flow-card::after{
@@ -2223,7 +2228,9 @@
   z-index:0 !important;
   left:var(--flow-line-left) !important;
   top:0 !important;
+  right:auto !important;
   bottom:0 !important;
+  transform:none !important;
   display:block !important;
   width:var(--flow-line-width) !important;
   background:linear-gradient(180deg, rgba(215,185,111,.08), rgba(215,185,111,.7), rgba(215,185,111,.08)) !important;
