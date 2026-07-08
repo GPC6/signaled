@@ -2121,6 +2121,8 @@
   --flow-marker:42px;
   --flow-marker-half:21px;
   --flow-gap:22px;
+  --flow-line-width:1px;
+  --flow-line-left:calc((var(--flow-marker) - var(--flow-line-width)) / 2);
   display:grid !important;
   grid-template-columns:1fr !important;
   gap:0 !important;
@@ -2219,11 +2221,11 @@
   content:"" !important;
   position:absolute !important;
   z-index:0 !important;
-  left:var(--flow-marker-half) !important;
+  left:var(--flow-line-left) !important;
   top:0 !important;
   bottom:0 !important;
   display:block !important;
-  width:1px !important;
+  width:var(--flow-line-width) !important;
   background:linear-gradient(180deg, rgba(215,185,111,.08), rgba(215,185,111,.7), rgba(215,185,111,.08)) !important;
 }
 
