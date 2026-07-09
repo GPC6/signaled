@@ -1,0 +1,331 @@
+/* Final Rael-inspired redesign overrides. Loaded after legacy styles. */
+body.rael-inspired,
+body.has-overlay-header{
+  --header-h:84px !important;
+  padding-top:0 !important;
+}
+
+body.rael-inspired .header,
+body.home-page.rael-inspired .header,
+body.has-overlay-header .header{
+  height:var(--header-h) !important;
+  background:rgba(8,7,6,.84) !important;
+  border-bottom:1px solid rgba(255,255,255,.14) !important;
+  backdrop-filter:blur(18px) !important;
+}
+
+body.rael-inspired .brand-textlogo,
+body.has-overlay-header .brand-textlogo,
+body.rael-inspired .site-footer .f-textlogo,
+body.has-overlay-header .site-footer .f-textlogo{
+  filter:brightness(0) invert(1) !important;
+}
+
+body.rael-inspired .nav-toggle,
+body.has-overlay-header .nav-toggle{
+  border:1px solid rgba(216,183,109,.72) !important;
+  border-radius:999px !important;
+}
+
+body.rael-inspired .nav-toggle span,
+body.has-overlay-header .nav-toggle span{
+  background:#d8b76d !important;
+}
+
+@media (min-width:981px){
+  body.rael-inspired .nav a,
+  body.has-overlay-header .nav a,
+  body.rael-inspired .nav-ko,
+  body.has-overlay-header .nav-ko{
+    color:rgba(255,255,255,.94) !important;
+  }
+
+  body.rael-inspired .nav-en,
+  body.has-overlay-header .nav-en{
+    color:rgba(255,255,255,.58) !important;
+  }
+
+  body.rael-inspired .nav-cta,
+  body.has-overlay-header .nav-cta{
+    border:1px solid rgba(216,183,109,.72) !important;
+    border-radius:999px !important;
+  }
+}
+
+body.has-overlay-header .edu-hero::before{
+  background:
+    linear-gradient(90deg, rgba(3,3,3,.9) 0%, rgba(3,3,3,.62) 42%, rgba(3,3,3,.2) 100%),
+    linear-gradient(180deg, rgba(3,3,3,.16) 0%, rgba(3,3,3,.78) 100%),
+    url("../../images/rael-hero.png") center / cover no-repeat !important;
+}
+
+body.rael-inspired .site-footer,
+body.has-overlay-header .site-footer{
+  background:#0d0b09 !important;
+  border-top:1px solid rgba(255,255,255,.16) !important;
+}
+
+body.rael-inspired .site-footer,
+body.rael-inspired .site-footer .f-inner,
+body.rael-inspired .site-footer .f-company,
+body.rael-inspired .site-footer .f-company b,
+body.rael-inspired .site-footer .f-cs-title,
+body.rael-inspired .site-footer .f-cs-phone,
+body.has-overlay-header .site-footer,
+body.has-overlay-header .site-footer .f-inner,
+body.has-overlay-header .site-footer .f-company,
+body.has-overlay-header .site-footer .f-company b,
+body.has-overlay-header .site-footer .f-cs-title,
+body.has-overlay-header .site-footer .f-cs-phone{
+  color:rgba(255,255,255,.74) !important;
+}
+
+body.rael-inspired .site-footer a,
+body.has-overlay-header .site-footer a{
+  color:#fff !important;
+}
+
+body.rael-inspired .rael-hero{
+  min-height:92vh !important;
+}
+
+body.rael-inspired .rael-hero h1{
+  max-width:13ch !important;
+  font-size:clamp(48px, 5.2vw, 82px) !important;
+  line-height:1.08 !important;
+  word-break:keep-all !important;
+  overflow-wrap:normal !important;
+}
+
+body.rael-inspired .rael-hero-desc{
+  max-width:620px !important;
+  color:rgba(255,255,255,.88) !important;
+}
+
+body.has-overlay-header .section{
+  padding:clamp(68px, 8vw, 120px) 0 !important;
+}
+
+body.has-overlay-header .section-head,
+body.has-overlay-header .section-head-row{
+  margin-bottom:clamp(28px, 4vw, 56px) !important;
+}
+
+body.has-overlay-header .section-title{
+  font-size:clamp(34px, 4.2vw, 62px) !important;
+  line-height:1.12 !important;
+}
+
+body.rael-inspired .reveal,
+body.rael-inspired .reveal-up,
+body.rael-inspired .reveal-on-scroll,
+body.has-overlay-header .reveal,
+body.has-overlay-header .reveal-up,
+body.has-overlay-header .reveal-on-scroll{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
+body.has-overlay-header .about-founder,
+body.has-overlay-header .consult-editorial-lead,
+body.has-overlay-header .ai-connects-intro,
+body.has-overlay-header .partner-intro-card,
+body.has-overlay-header .portfolio-intro-card,
+body.has-overlay-header .notice-board,
+body.has-overlay-header .contact-channel-box,
+body.has-overlay-header .consult-cta-box,
+body.has-overlay-header .consult-message-box,
+body.has-overlay-header .partner-cta-box,
+body.has-overlay-header .portfolio-cta-box,
+body.has-overlay-header .ai-cta-box,
+body.has-overlay-header .signal-method-banner{
+  background:#14110e !important;
+}
+
+body.has-overlay-header .about-founder p,
+body.has-overlay-header .consult-editorial-lead p,
+body.has-overlay-header .ai-connects-intro p,
+body.has-overlay-header .partner-intro-card p,
+body.has-overlay-header .portfolio-intro-card p,
+body.has-overlay-header .notice-board p,
+body.has-overlay-header .contact-channel-box p,
+body.has-overlay-header .consult-cta-box p,
+body.has-overlay-header .consult-message-box p,
+body.has-overlay-header .partner-cta-box p,
+body.has-overlay-header .portfolio-cta-box p,
+body.has-overlay-header .ai-cta-box p,
+body.has-overlay-header .signal-method-banner p,
+body.has-overlay-header .notice-board .news-summary,
+body.has-overlay-header .notice-board .news-date{
+  color:rgba(255,255,255,.82) !important;
+}
+
+body.has-overlay-header .notice-board .news-title,
+body.has-overlay-header .notice-board .news-tag{
+  color:#fff !important;
+}
+
+body.has-overlay-header .signal-summary-grid,
+body.has-overlay-header .signal-philosophy-principles,
+body.has-overlay-header .signal-method-steps,
+body.has-overlay-header .consult-question-rail,
+body.has-overlay-header .consult-principle-list,
+body.has-overlay-header .contact-guide-grid,
+body.has-overlay-header .partner-process-grid,
+body.has-overlay-header .ai-value-flow,
+body.has-overlay-header .portfolio-case-grid,
+body.has-overlay-header .portfolio-growth-grid,
+body.has-overlay-header .portfolio-review-grid,
+body.has-overlay-header .portfolio-archive-grid{
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)) !important;
+}
+
+body.has-overlay-header .signal-summary-card,
+body.has-overlay-header .signal-principle-card,
+body.has-overlay-header .signal-method-card,
+body.has-overlay-header .consult-question-rail li,
+body.has-overlay-header .consult-principle-list section,
+body.has-overlay-header .contact-guide-card,
+body.has-overlay-header .partner-process-item,
+body.has-overlay-header .ai-value-flow li,
+body.has-overlay-header .portfolio-case-card,
+body.has-overlay-header .portfolio-growth-card,
+body.has-overlay-header .portfolio-review-card,
+body.has-overlay-header .portfolio-archive-card{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  justify-content:flex-start !important;
+  gap:14px !important;
+  min-height:0 !important;
+  padding:clamp(24px, 2.6vw, 34px) !important;
+}
+
+body.has-overlay-header .signal-summary-card > *,
+body.has-overlay-header .signal-principle-card > *,
+body.has-overlay-header .signal-method-card > *,
+body.has-overlay-header .consult-question-rail li > *,
+body.has-overlay-header .consult-principle-list section > *,
+body.has-overlay-header .contact-guide-card > *,
+body.has-overlay-header .partner-process-item > *,
+body.has-overlay-header .ai-value-flow li > *,
+body.has-overlay-header .portfolio-case-card > *,
+body.has-overlay-header .portfolio-growth-card > *,
+body.has-overlay-header .portfolio-review-card > *,
+body.has-overlay-header .portfolio-archive-card > *{
+  grid-column:auto !important;
+  grid-row:auto !important;
+  max-width:100% !important;
+}
+
+body.has-overlay-header .signal-summary-card h3,
+body.has-overlay-header .signal-principle-card h3,
+body.has-overlay-header .signal-method-card h3,
+body.has-overlay-header .consult-question-rail h3,
+body.has-overlay-header .consult-principle-list h3,
+body.has-overlay-header .contact-guide-card h3,
+body.has-overlay-header .partner-process-item h3,
+body.has-overlay-header .portfolio-case-card h3,
+body.has-overlay-header .portfolio-growth-card h3,
+body.has-overlay-header .portfolio-archive-card h3{
+  margin:0 !important;
+  font-size:clamp(24px, 2vw, 34px) !important;
+  line-height:1.24 !important;
+  word-break:keep-all !important;
+  overflow-wrap:normal !important;
+}
+
+body.has-overlay-header .signal-summary-card p,
+body.has-overlay-header .signal-principle-card p,
+body.has-overlay-header .signal-method-card p,
+body.has-overlay-header .consult-question-rail p,
+body.has-overlay-header .consult-principle-list p,
+body.has-overlay-header .contact-guide-card p,
+body.has-overlay-header .partner-process-item p,
+body.has-overlay-header .ai-value-flow p,
+body.has-overlay-header .portfolio-case-card p,
+body.has-overlay-header .portfolio-growth-card p,
+body.has-overlay-header .portfolio-archive-card p{
+  font-size:16px !important;
+  line-height:1.72 !important;
+  word-break:keep-all !important;
+  overflow-wrap:normal !important;
+}
+
+.news-contact-page .contact-location-grid{
+  display:grid !important;
+  grid-template-columns:minmax(320px, .58fr) minmax(360px, .42fr) !important;
+  gap:clamp(28px, 5vw, 72px) !important;
+  align-items:start !important;
+}
+
+.news-contact-page .contact-location-info{
+  display:block !important;
+  border-top:2px solid #17130f !important;
+}
+
+.news-contact-page .contact-location-info article{
+  display:grid !important;
+  grid-template-columns:120px minmax(0, 1fr) !important;
+  gap:18px !important;
+  align-items:start !important;
+  padding:28px 0 !important;
+}
+
+.news-contact-page .contact-location-info h3{
+  max-width:none !important;
+  word-break:keep-all !important;
+  overflow-wrap:normal !important;
+  line-height:1.3 !important;
+}
+
+@media (max-width:980px){
+  body.rael-inspired,
+  body.has-overlay-header{
+    --header-h:74px !important;
+  }
+
+  body.has-overlay-header .edu-hero{
+    min-height:580px !important;
+    align-items:center !important;
+    padding:calc(var(--header-h) + 56px) 0 70px !important;
+  }
+
+  body.has-overlay-header .edu-hero-title{
+    max-width:none !important;
+    font-size:clamp(48px, 12vw, 64px) !important;
+    word-break:keep-all !important;
+    overflow-wrap:normal !important;
+  }
+
+  body.has-overlay-header .edu-hero-desc{
+    max-width:31ch !important;
+    font-size:16px !important;
+  }
+
+  body.rael-inspired .rael-hero{
+    min-height:720px !important;
+  }
+
+  body.rael-inspired .rael-hero h1{
+    font-size:clamp(40px, 10vw, 56px) !important;
+    line-height:1.08 !important;
+  }
+
+  body.has-overlay-header .section-head,
+  body.has-overlay-header .section-head-row{
+    grid-template-columns:1fr !important;
+  }
+
+  .news-contact-page .contact-location-grid,
+  .news-contact-page .contact-location-info article{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media (max-width:420px){
+  body.has-overlay-header .edu-hero-title{
+    font-size:clamp(42px, 11vw, 54px) !important;
+  }
+}
